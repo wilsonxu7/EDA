@@ -1,0 +1,122 @@
+# Create corners and P/G pads
+//创建四个corner
+create_cell {cornerll cornerlr cornerul cornerur} pfrelr
+create_ce
+ll {vss1left vss1right vss1top vss1bottom} pv0i
+create_cell {vdd1left vdd1right vdd1top
+vdd1bottom} pvdi
+create_cell {vss2left vss2right vss2top vss2bottom} pv0a
+create_cell {vdd2left vdd2right vdd2top vdd2bottom} pvda
+//设置P/G pads(VSS,VDD)
+# Define corner pad locations
+//定义四个角落的位置
+set_pad_physical_constraints
+pad_name "cornerul" side 1
+set_pad_physical_constraints
+pad_name "cornerur" side 2
+set_pad_physical_constraints
+pad_name "cornerlr" side 3
+set_pad_physical_constraints
+pad_name "cornerll" side 4
+# Define signal and PG
+pad locations
+# Left side
+//创建左侧信号输入输出口
+set_pad_physical_constraints
+pad_name "clk_iopad" side 1 order 1
+set_pad_physical_constraints
+pad_name "cycle_iopad" side 1 order 2
+set_pad_physical_constr
+aints pad_name "write_iopad" side 1 order 3
+set_pa
+d_physical_constraints pad_name "ifetch_iopad" side 1 order 4
+set_pad_physical_constraints
+pad_name "iack_n_iopad" side 1 order 5
+set_pad_physical_constraints
+pad_name "ie_iopad" side 1 order 6
+set_pad_physical_constraints
+pad_name "address_iopad _15" side 1 order 7
+set_pad_physical_constraints
+pad_name "address_iopad_14" side 1 order 8
+set_pad_physical_constraints
+pad_name "address_iopad_13" side 1 order 9
+set_pad_physical_constraints
+pad_name "address_iopad_12" side 1 order 10
+set_pad_physical_constraints
+pad_name "address_iopad_11" side 1 order 11
+# Top side
+//创建顶层信号输入输出口 添加了空的pin12实现top和bottom的针脚对称
+set_pad_physical_constraints
+pad_name "address_iopad_16" side 2 order 12
+set_
+pad_physical_constraints pad_name "address_iopad_10" side 2 order 1
+set_pad_physical_constraints
+pad_name "address_iopad_9" side 2 order 2
+set_pad_physical_constraints
+pad_name "address_iopad_8" side 2 order 3
+set_pad_physical_constraints
+pad _nam e "address_iopad_7" side 2 order 4
+set_pad_physical_constraints
+pad_name "address_iopad_6" side 2 order 5
+set_pad_physical_constraints
+pad_name "address_iopad_5" side 2 order 6
+set_pad_physical_constraints
+pad_name "address_iopad_4" side 2 o rder 7
+set_pad_physical_constraints
+pad_name "address_iopad_3" side 2 order 8
+set_pad_physical_constraints
+pad_name "address_iopad_2" side 2 order 9
+set_pad_physical_constraints
+pad_name "address_iopad_1" side 2 order 10
+set_pad_physical_constrain
+ts pad_name "address_iopad_0" side 2 order 11
+# Right side
+//创建右侧信号输入输出口
+set_pad_physical_constraints
+pad_name "data_out_iopad_0" side 3 order 1
+set_pad_physical_constraints
+pad_name "data_out_iopad_1" side 3 order 2
+set_pad_physical_constraints
+pad _name "data_out_iopad_2" side 3 order 3
+set_pad_physical_constraints
+pad_name "data_out_iopad_3" side 3 order 4
+set_pad_physical_constraints
+pad_name "data_out_iopad_4" side 3 order 5
+set_pad_physical_constraints
+pad_name "data_out_iopad_5" s ide 3 order 6
+set_pad_physical_constraints
+pad_name "data_out_iopad_6" side 3 order 7
+set_pad_physical_constraints
+pad_name "data_out_iopad_7" side 3 order 8
+set_pad_physical_constraints
+pad_name "rst_n_iopad" side 3 order 9
+set_pad_physical_constrai
+nts pad_name "nmi_iopad" side 3 order 10
+set_pad_physical_constraints
+pad_name "int_iopad" side 3 order 11
+# Bottom side
+//创建底部信号输入输出口
+set_pad_physical_constraints
+pad_name "ready_iopad" side 4 order 1
+set_pad_physical_co
+nstraints pad_name "data _in_iopad_0" side 4 order 2
+set_pad_physical_constraints
+pad_name "data_in_iopad_1" side 4 order 3
+set_pad_physical_constraints
+pad_name "data_in_iopad_2" side 4 order 4
+set_pad_physical_constraints
+pad_name "data_in_iopad _3" side 4 order 5
+set_
+pad_physical_constraints pad_name "data_in_iopad_4" side 4 order 6
+set_pad_physical_constraints
+pad_name "data_in_iopad_5" side 4 order 7
+set_pad_physical_constraints
+pad_name "data_in_iopad_6" side 4 order 8
+set_pad_physi
+cal_constraints pad_name "data_in_iopad_7" side 4 order 9
+set_pad_physical_constraints
+pad_name "scan_in_iopad" side 4 order 10
+set_pad_physical_constraints
+pad_name "scan_en_iopad" side 4 order 11
+set_pad_physical_constraints
+pad_name "scan_mode _iopad" side 4 order 12
